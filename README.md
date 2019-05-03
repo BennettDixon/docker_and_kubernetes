@@ -25,7 +25,7 @@ $ sudo apt-get install git
 
 ## :mag: License
 
-This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/BennettDixon/holbertonschool-lower_level_programming/blob/master/LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/BennettDixon/docker_and_kubernetes/LICENSE.md) file for details
 
 
 ## :mega: Acknowledgments
