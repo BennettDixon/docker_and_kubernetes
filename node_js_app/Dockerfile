@@ -5,10 +5,12 @@ FROM node:6.17-alpine
 WORKDIR /usr/my_node_app
 
 # Copy files over
-COPY /*.js* ./
+COPY ./package.json ./
 
 # SET UP DEPENDENCIES
 RUN npm install
+
+COPY ./ ./
 
 # Default command
 CMD ["npm", "start"]
