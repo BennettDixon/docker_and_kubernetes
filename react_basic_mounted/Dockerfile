@@ -3,7 +3,7 @@ FROM node:alpine as builder
 WORKDIR '/app'
 COPY package.json .
 RUN npm install
-COPY . .
+COPY ./react_basic_mounted .
 RUN npm run build
 
 # run server in run stage
