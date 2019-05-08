@@ -12,3 +12,19 @@ before_install:
 # because npm test suite default hangs and waits for user input
 script:
   - docker run bennettdixon16/react_travis_aws_basic npm run test -- --coverage
+
+# AWS deployment information
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-2"
+  app: "react_docker_travis_basic"
+  env: "ReactDockerTravisBasic-env"
+  bucket_name: "elasticbeanstalk-us-east-2-389505919169"
+  # folder within bucket for app, same as app
+  bucket_path: "react_docker_travis_basic"
+  # specify which branch to deploy when being pushed to
+  on:
+    branch: master
+  access_key_id: "$AWS_ACCESS_KEY"
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY"
