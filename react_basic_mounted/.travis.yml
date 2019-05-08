@@ -1,11 +1,13 @@
 # currently docker daemon needs sudo
 # as of version 18.06
 sudo: required
+
 services:
   - docker
 
 # series of commands exc before tests run
 before_install:
+  - cd react_basic_mounted
   - docker build -t bennettdixon16/react_travis_aws_basic -f Dockerfile.dev ./
 
 # run the npm tests, using `-- --coverage` to auto exit for travis' sake
