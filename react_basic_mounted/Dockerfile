@@ -8,4 +8,7 @@ RUN npm run build
 
 # run server in run stage
 FROM nginx
+# AWS EBS Instance looks for this line, does nothing locally
+EXPOSE 80
+# Copy built app to current directory
 COPY --from=builder /app/build /usr/share/nginx/html
